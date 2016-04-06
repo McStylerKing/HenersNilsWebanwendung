@@ -18,3 +18,8 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+
+Route::get('/eintraege', 'EintragController@index');
+Route::post('/eintrag', 'EintragController@speichern');
+Route::delete('/eintrag/{eintrag}', 'EintragController@loeschen');
